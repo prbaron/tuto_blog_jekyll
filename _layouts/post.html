@@ -1,9 +1,31 @@
----
-layout: default
----
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-<div class="post">
-{{ content }}
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{site.url}}/css/bootstrap.min.css">
+</head>
+<body>
+    {% include menu.html %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>{{ page.title }} <small>{{ page.date | date_to_string }}</small></h1>
+                {{ content }}
+                <ul class="pager">
+                    {% if page.previous %}
+                        <li class="previous"><a href="{{site.url}}{{ page.previous.url }}">&larr; {{ page.previous.title }} </a></li>
+                    {% endif %}
+                    {% if page.next %}
+                        <li class="next"><a href="{{site.url}}{{ page.next.url }}">{{ page.next.title }} &rarr;</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        {% include footer.html %}
+    </div> <!-- /container -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="{{site.url}}/js/bootstrap.min.js"></script>
+</body>
+</html>
