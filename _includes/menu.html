@@ -11,9 +11,14 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="{{site.url}}/">index</a></li>
-                <li><a href="{{site.url}}/about/">A propos</a></li>
-                <li><a href="/blog/">Blog</a></li>
+        	    {% for link in site.navigation %}
+                    {% assign current = nil %}
+                    {% assign currentPage = page.url | remove: 'index.html' %}
+                        {% if currentPage == link.url or page.layout == link.layout %}
+                            {% assign current = 'active' %}
+                        {% endif %}
+                        <li class="{{current}}"><a href="{{site.url}}{{ link.url }}">{{ link.text }}</a></li>
+                {% endfor %}
                 <li><a href="mailto:exemple@exemple.com">Contact</a></li>
             </ul>
         </div>

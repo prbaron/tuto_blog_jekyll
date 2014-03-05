@@ -3,7 +3,7 @@ layout: default
 title: Mon blog
 ---
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-8">
         <h1>Mon blog</h1>
         {% for post in paginator.posts %}
             <div>
@@ -14,5 +14,8 @@ title: Mon blog
             <hr>
         {% endfor %}
         {% include pagination.html %}
+    </div>
+    <div class="col-md-4">
+        {% include categories.html %}
     </div>
 </div>

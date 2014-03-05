@@ -4,3 +4,15 @@ markdown: rdiscount           # le parseur de Markdown à utiliser pour parser v
 paginate: 3                   # le nombre d'articles à afficher par page
 paginate_path: /blog/page:num # l'url générée pour la pagination
 permalink: /blog/:title       # l'url générée pour la visualisation d'un article complet
+disqus : 'tutojekyll'         # remplacez par votre shortName disqus
+encoding: UTF-8
+navigation:
+- text: Index
+  url: /
+- text: A propos
+  url: /about/
+- text: Blog
+  url: /blog/
+  layout: post
+
+google_analytics_id : 'your-id'
