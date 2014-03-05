@@ -25,6 +25,11 @@
                     {% if page.next %}
                         <li class="next"><a href="{{site.url}}{{ page.next.url }}">{{ page.next.title }} &rarr;</a></li>
                     {% endif %}
+
+                    {% if page.comments %}
+                        &nbsp;
+                        {% include disqus.html %}
+                    {% endif %}
                 </ul>
             </div>
             <div class="col-md-4">
@@ -34,6 +39,8 @@
 
         {% include footer.html %}
     </div> <!-- /container -->
+
+    {% include analytics.html %}
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="{{site.url}}/js/bootstrap.min.js"></script>
