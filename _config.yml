@@ -1,10 +1,17 @@
-url: http://localhost:4000    # l'url finale de votre site. Elle est utilisée dans la variable site.url
-name: Your New Jekyll Site    # le nom de votre site
-markdown: rdiscount           # le parseur de Markdown à utiliser pour parser vos fichiers. La syntaxe Markdown peut changer suivant le parseur utilisé
-paginate: 3                   # le nombre d'articles à afficher par page
-paginate_path: /blog/page:num # l'url générée pour la pagination
-permalink: /blog/:title       # l'url générée pour la visualisation d'un article complet
-disqus : 'tutojekyll'         # remplacez par votre shortName disqus
+# l'url finale de votre site. Elle est utilisée dans la variable site.url
+site_url : http://www.pierrebaron.fr/tuto_blog_jekyll
+# le nom de votre site
+name: Your New Jekyll Site
+# le parseur de Markdown à utiliser pour parser vos fichiers. La syntaxe Markdown peut changer suivant le parseur utilisé
+markdown: rdiscount
+# le nombre d'articles à afficher par page
+paginate: 3
+# l'url générée pour la pagination
+paginate_path: /blog/page:num
+# l'url générée pour la visualisation d'un article complet
+permalink: /blog/:title
+# remplacez par votre shortName disqus
+disqus : 'tutojekyll'
 encoding: UTF-8
 navigation:
 - text: Index
