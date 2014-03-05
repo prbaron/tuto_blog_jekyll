@@ -1,5 +1,5 @@
 # l'url finale de votre site. Elle est utilisée dans la variable site.url
-site_url : http://www.pierrebaron.fr/tuto_blog_jekyll
+url : http://www.pierrebaron.fr/tuto_blog_jekyll
 # le nom de votre site
 name: Your New Jekyll Site
 # le parseur de Markdown à utiliser pour parser vos fichiers. La syntaxe Markdown peut changer suivant le parseur utilisé
